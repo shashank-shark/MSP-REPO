@@ -71,7 +71,7 @@ Before we write the publisher, it is very much necessary to understand the basic
 
 **context** : A thread safe instance used to initialize and create ZMQ sockets.
 
-> Coding the Publisher:
+### Coding the Publisher:
 
 First lets import the necessary header file (*zhelpers.h*). This header file contains code which simplifies our imports and automatically handles the way we send messages across different machines.
 
@@ -130,7 +130,7 @@ int main (int argc, char *argv[])
 }
 ```
 
-> Program Description
+### Program Description
 
 In the first few lines of code, we setup the ZMQ context and create a publisher socket. Then, we bind the publisher to the port 8080 (you are free to use any ports within range). Most of the time we bind the entities which remain static in the network, hence publishers which remain static will do the binding unlike subscribers (dynamic entities of the network) who join and leave the network at any time.
 
@@ -141,7 +141,7 @@ In furthur lines of code we initialize a random number seed and using `srandom` 
 Using the `s_send()` function we send the messages to all subscribers who have subscribed to this topic (How to subscribe for topics? is covered under *Coding the subscriber* part of the chapter).
 
 # Subscriber
-> Coding the Subscriber:<br>
+### Coding the Subscriber:<br>
 
 First lets import the necessary header file (*zhelpers.h*). This header file contains code which simplifies our imports and automatically handles the way we send messages across different machines.
 
@@ -185,7 +185,7 @@ int main (int argc, char *argv[])
 }
 ```
 
-> Program Description:
+### Program Description:
 
 `void *context = zmq_ctx_new ()` **-** creates a new ZMQ context.<br>
 `void *subscriber = zmq_socket (context, ZMQ_SUB)` **-** create a new subscriber socket.<br> We use ZMQ_SUB along with the context to create a subscriber socket.
@@ -197,7 +197,7 @@ The ` zmq_setsockopt` function adds a filter to your subscriber socket so that y
 
 Next we infinitely loop to get the messages from the publisher. `s_recv()` function gives the message that was recieved from the publisher.
 
-## Lets run the code
+### Lets run the code
 Open a terminal and navigate to the directory where the supporting program files are present.
 ```
 .
