@@ -8,6 +8,7 @@ I am writing this tutorial exclusively for Microsoft Student Partner Community a
 If you find any errors or doubts within this tutorial, then you can reach out to me at <br>**Shashank.J@studentpartner.com**
 
 ## **TOC**
+
 | SNO  |  TITLE | PAGE NO.  |
 |---|---|---|
 | **1**  | **What are we planning to do ?**  | 1  |
@@ -81,6 +82,7 @@ First lets import the necessary header file (*zhelpers.h*). This header file con
 The code for publisher program is given below.
 
 > *publisher.c*
+
 ```c
 #include "zhelpers.h"
 
@@ -146,6 +148,7 @@ First lets import the necessary header file (*zhelpers.h*). This header file con
 The code for subsciber program is given below.
 
 > *subscriber.c*
+
 ```c
 #include "zhelpers.h"
 
